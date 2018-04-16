@@ -233,9 +233,7 @@ def add_point( matrix, x, y, z=0 ):
     matrix.append( [x, y, z, 1] )
     
 def push_world( matrix ):
-    print len(matrix[-1:][0])
     push_m = new_matrix()
-    print push_m
     for row in range(len(matrix[-1:][0])):
         for col in range(len(matrix[-1:][0][0])):
             push_m[col][row] = matrix[-1:][0][col][row]

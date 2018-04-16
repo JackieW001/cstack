@@ -95,9 +95,9 @@ def parse_file( fname, stack, edges, polygons, transform, screen, color ):
             add_box(temp,
                     float(args[0]), float(args[1]), float(args[2]),
                     float(args[3]), float(args[4]), float(args[5]))
-            print "temp before mm", temp
+            #print "temp before mm", temp
             matrix_mult(stack[-1:][0],temp)
-            print "temp after mm", temp
+            #print "temp after mm", temp
             draw_polygons(temp, screen, color)
 
         elif line == 'circle':
@@ -134,14 +134,16 @@ def parse_file( fname, stack, edges, polygons, transform, screen, color ):
         elif line == 'scale':
             #print 'SCALE\t' + str(args)
             t = make_scale(float(args[0]), float(args[1]), float(args[2]))
-            matrix_mult(t,stack[-1:][0])
+            matrix_mult(stack[-1:][0], t)
+            stack[-1] = t
 
         elif line == 'move':
             #print 'MOVE\t' + str(args)
-            print "stack bef mm", stack[-1:][0]
+            #print "stack bef mm", stack[-1:][0]
             t = make_translate(float(args[0]), float(args[1]), float(args[2]))
-            matrix_mult(t, stack[-1:][0])
-            print "stack af mm", stack[-1:][0]
+            matrix_mult(stack[-1:][0], t)
+            stack[-1] = t
+            #print "stack af mm", stack[-1:][0]
 
         elif line == 'rotate':
             #print 'ROTATE\t' + str(args)
@@ -153,7 +155,8 @@ def parse_file( fname, stack, edges, polygons, transform, screen, color ):
                 t = make_rotY(theta)
             else:
                 t = make_rotZ(theta)
-            matrix_mult(t, stack[-1:][0])
+            matrix_mult(stack[-1:][0], t)
+            stack[-1] = t
 
 
         elif line == "push":
@@ -162,6 +165,7 @@ def parse_file( fname, stack, edges, polygons, transform, screen, color ):
             
         elif line == "pop":
             pop_world(stack)
+            print "POP"
 
             
         elif line == 'display' or line == 'save':

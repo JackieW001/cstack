@@ -105,6 +105,7 @@ def matrix_mult( m1, m2 ):
                             m1[3][r] * tmp[3])
         point+= 1
 
+    
 def new_matrix(rows = 4, cols = 4):
     m = []
     for c in range( cols ):
