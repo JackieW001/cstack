@@ -1,0 +1,133 @@
+#PALM
+push
+move
+250 200 0
+rotate
+y 45
+rotate
+x -30
+
+box
+-80 -95 0 160 -190 20
+
+#THUMB
+
+#bot
+push
+move
+-90 -95 0
+rotate
+z -10
+rotate
+x -50
+box
+-40 0 0 40 -100 20
+
+#top
+push
+move
+-20 115 0
+rotate
+x 45
+sphere
+0 0 -9 15
+box
+-15 15 0 30 -85 20
+
+
+
+#INDEX
+pop
+pop
+
+#bottom
+push
+move
+-80 95 0
+rotate
+x -60
+box
+0 0 0 20 -40 20
+
+#middle
+push
+move
+0 50 0
+rotate
+x -30
+sphere
+10 0 0 10
+box
+0 10 0 20 -40 20
+
+#top
+push
+move
+0 60 0
+rotate
+x -45
+sphere
+10 0 0 10
+box
+0 10 0 20 -30 20
+
+
+#MID
+pop
+pop
+pop
+push
+move
+-35 95 0
+rotate
+x -10
+box
+0 0 0 20 -70 20
+sphere
+10 81 0 10
+box
+0 90 0 20 -40 20
+sphere
+10 141 0 10
+box
+0 150 0 20 -40 20
+
+
+#RING
+pop
+push
+move
+15 95 0
+rotate
+x -5
+box
+0 0 0 20 -40 20
+sphere
+10 50 0 10
+box
+0 60 0 20 -40 20
+sphere
+10 110 0 10
+box
+0 120 0 20 -40 20
+
+#PINKY
+pop
+push
+move
+60 95 0
+box
+0 0 0 20 -30 20
+sphere
+11 40 0 10
+box
+0 50 0 20 -30 20
+sphere
+11 90 0 10
+box
+0 100 0 20 -35 20
+
+display
+
+save
+ok.png
