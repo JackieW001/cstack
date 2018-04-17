@@ -1,0 +1,65 @@
+#PALM
+push
+move
+250 100 0
+box
+-80 95 0 160 190 20
+
+#INDEX
+
+#bottom
+push
+move
+-80 95 0
+box
+0 0 0 20 -40 20
+
+#middle
+push
+move
+0 50 0
+sphere
+10 0 0 10
+box
+0 10 0 20 -40 20
+
+#top
+push
+move
+0 60 0
+sphere
+10 0 0 10
+box
+0 10 0 20 -30 20
+
+
+
+
+
+#MID
+pop
+pop
+pop
+push
+move
+-35 95 0
+box
+0 0 0 20 -70 20
+
+#RING
+pop
+push
+move
+15 95 0
+box
+0 0 0 20 -40 20
+
+#PINKY
+pop
+push
+move
+60 95 0
+box
+0 0 0 20 -30 20
+
+display

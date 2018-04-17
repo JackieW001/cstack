@@ -15,4 +15,4 @@ stack = [t]
 
 transform = new_matrix()
 
-parse_file( 'script', stack, edges, polygons, transform, screen, color )
+parse_file( 'script2', stack, edges, polygons, transform, screen, color )

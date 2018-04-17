@@ -161,11 +161,11 @@ def parse_file( fname, stack, edges, polygons, transform, screen, color ):
 
         elif line == "push":
             push_world(stack)
-            print "STACK:", stack
+            #print "STACK:", stack
             
         elif line == "pop":
             pop_world(stack)
-            print "POP"
+            #print "POP"
 
             
         elif line == 'display' or line == 'save':
